@@ -6,7 +6,7 @@
 		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd">
 
 	<aop:aspectj-autoproxy />
-	<bean id="logAOP" class="aop.CommonAOP2" />
+	<bean id="myAOP2" class="aop.CommonAOP2" />
 	
 	<bean id="salesMan" class="aop.SalesManVO">
 		<property name="name" value="안영이" />

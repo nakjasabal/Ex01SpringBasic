@@ -11,10 +11,10 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
-import common.StudentDTO;
+import common._StudentDTO;
    
  
-public class RequestMappingController_ {
+public class _RequestMappingController {
 	
 	//get 혹은 post 방식의 전송을 위한 인덱스 페이지 매핑
 	@RequestMapping(value="/requestMapping/index.do")
@@ -106,7 +106,7 @@ public String myMethod() {
 	 */
 	@RequestMapping("/requestMapping/modelAttribute.do")
 	public String studentInfo(
-		@ModelAttribute("si") StudentDTO studentDTO) {
+		@ModelAttribute("si") _StudentDTO studentDTO) {
 		
 		return "02RequestMapping/modelAttribute";
 	}

@@ -10,7 +10,7 @@
 </head>
 <body>
 <div class="container">
-	<h2>@RequestMapping 어노테이션</h2>		
+	<h2>@RequestMapping 어노테이션의 속성들</h2>	
 	<h3><%=request.getMethod() %> 방식으로 전송된 검색 파라미터</h3>	
 	<ul>
 		<li>검색필드 : ${sColumn }</li>

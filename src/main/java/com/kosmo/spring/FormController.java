@@ -4,6 +4,7 @@ import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -87,13 +88,25 @@ public class FormController {
 		파라미터명과 멤버변수명은 동일해야 되고 이에 해당하는
 		getter/setter가 반드시 생성되어야 한다. 
 	 */
-	@RequestMapping("/form/commandObjGet.do")
+	@RequestMapping("/form/commandObject.do")
 	public String commandObjGet(MemberDTO memberDTO) {
 		/*
 		커맨드 객체를 사용하면 폼값을 받는 즉시 Model객체에 저장까지 완료되어
 		별도의 코드가 필요하지 않다.
 		 */
-		return "01Form/commandObjGet";
+		return "01Form/commandObject";
+	}
+	
+	/*
+	@ModelAttribute
+		: 뷰로 전달되는 커맨드객체의 이름을 변경하고 싶을때 사용한다. 
+		StudentDTO를 si로 변경하여 뷰로 전달한다. 
+	 */
+	@RequestMapping("/form/modelAttribute.do")
+	public String studentInfo(
+		@ModelAttribute("dto") MemberDTO memberDTO) {
+		
+		return "01Form/modelAttribute";
 	}
 	
 	/*

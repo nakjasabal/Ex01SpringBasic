@@ -10,9 +10,9 @@
 	
 	<!-- AOP 설정 --> 
 	<aop:config>
-		<aop:aspect id="logger" ref="commonAOP1">
-			<aop:pointcut expression="within(aop.*)" id="myPublicMethod" />
-			<aop:around pointcut-ref="myPublicMethod" method="loggerAOP" />
+		<aop:aspect id="myAOP1" ref="commonAOP1">
+			<aop:pointcut expression="within(aop.*)" id="myMethod" />
+			<aop:around pointcut-ref="myMethod" method="runTimeAOP" />
 		</aop:aspect>
 	</aop:config>
 	
@@ -28,5 +28,3 @@
 		</property>
 	</bean>		
 </beans>
-
-

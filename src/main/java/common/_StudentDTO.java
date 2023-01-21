@@ -1,6 +1,6 @@
 package common;
 
-public class StudentDTO {
+public class _StudentDTO {
 
 	//멤버변수
 	private String name;
@@ -12,8 +12,8 @@ public class StudentDTO {
 	반드시 기본생성자가 필요하다. 따라서 처음부터 생성자를 
 	만들지 않거나, 만약 만든다면 기본생성자를 추가해야한다. 
 	 */
-	public StudentDTO() {}
-	public StudentDTO(String name, String age, String gradeNum, String classNum) {
+	public _StudentDTO() {}
+	public _StudentDTO(String name, String age, String gradeNum, String classNum) {
 		super();
 		this.name = name;
 		this.age = age;

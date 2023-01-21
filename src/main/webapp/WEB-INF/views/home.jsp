@@ -36,7 +36,7 @@ $(function(){
 	<img src="./resources/images/2.png" alt="징징이" />
 	<img src="./static/images/3.png" alt="뚱뚱이" />
 
-
+	<hr />
 
 	<!-- 1.컨트롤러 제작을 위해 제일 먼저 요청명을 결정한다. 
 	컨트롤러는 servlet-context.xml에 context:component-scan
@@ -47,6 +47,7 @@ $(function(){
 		<a href="./home/helloSpring" target="_blank">첫번째 컨트롤러</a>
 	</li>
 	
+	<hr />
 	
 	<!-- 컨트롤러 : FormController.java -->	
 	<h3>form값 처리하기</h3>
@@ -58,23 +59,27 @@ $(function(){
 		</a>
 	</li>
 	<li>
-		<a href="./form/requestParam.do?id=korea&pw=1234
-					&name=홍길동&email=hong@gildong.com" target="_blank">
+		<a href="./form/requestParam.do?id=korea&pw=1234&name=홍길동&email=hong@gildong.com" target="_blank">
 			@requestParam 어노테이션으로 폼값받기
 		</a>
 	</li>
 	<li>
-		<a href="./form/commandObjGet.do?id=korea&pw=1234&name=홍길동&email=hong@gildong.com" target="_blank">
+		<a href="./form/commandObject.do?id=korea&pw=1234&name=홍길동&email=hong@gildong.com" target="_blank">
 			커맨드(Command)객체로 한번에 폼값받기
 		</a>
 	</li>
 	<li>
-		<a href="./form/gildong99/코스모" target="_blank">
+		<a href="./form/modelAttribute.do?id=korea&pw=1234&name=홍길동&email=hong@gildong.com" target="_blank">
+			@ModelAttribute 사용하기
+		</a>
+	</li>
+	<li>
+		<a href="./form/gildong99/코리아" target="_blank">
 			pathVariable 어노테이션으로 폼값받기
 		</a>
 	</li>
 	
-	
+	<hr />	
 	
 	<!-- 컨트롤러 : RequestMappingController.java -->
 	<h3>@RequestMapping 어노테이션 활용</h3>
@@ -83,14 +88,8 @@ $(function(){
 			requestMapping시작페이지 바로가기
 		</a>
 	</li>
-	<li>
-		<a href="./requestMapping/modelAttribute.do?id=korea&pw=1234&name=홍길동&email=hong@gildong.com" target="_blank">
-			@ModelAttribute 사용하기
-		</a>
-	</li>
-	
-	
-	
+
+	<hr />	
 		
 	<!-- 컨트롤러 : ValidateController.java -->
 	<h3>폼 데이터 검증하기 - Validator</h3>
@@ -99,9 +98,8 @@ $(function(){
 			회원가입 바로가기
 		</a>
 	</li>
-	
-	
-	
+		
+	<hr />
 
 	<!-- 컨트롤러 : DIController.java -->
 	<h3>DI(Dependency Injection) : 의존성주입</h3>
@@ -121,8 +119,7 @@ $(function(){
 		</a>
 	</li>
 	
-	
-
+	<hr />
 	
 	<!-- 컨트롤러 : EnvironmentController -->
 	<h3>Environment 객체를 이용한 외부파일 참조하기</h3>
@@ -142,10 +139,8 @@ $(function(){
 		</a>
 	</li>
 	
+	<hr />
 	
-	
-
-
 	<h3>파일업로드</h3>
 	<li>
 		<a href="./fileUpload/uploadPath.do" target="_blank">
@@ -163,8 +158,7 @@ $(function(){
 		</a>
 	</li>
 	
-
-
+	<hr />
 	
 	<h3>@Controller, @Service, @Repository 어노테이션</h3>
 	<h4>Auto scan으로 자동으로 생성되는 빈</h4>
@@ -180,7 +174,7 @@ $(function(){
 		</a>
 	</li>
 	
-			
+	<hr />
 
 	<h3>HTML / JSP 파일 사용하기</h3>
 	<!--  
@@ -206,8 +200,7 @@ $(function(){
 			요청명 방식에서 파일 인클루드 하기</a>
 	</li>
 	
-	
-	
+	<hr />	
 		
 	<h2>AOP(Aspect Oriented Programming)</h2>
 	<li>
@@ -216,11 +209,6 @@ $(function(){
 	<li>
 		<a href="./aop/main2.do" target="_blank">바로가기2</a>
 	</li>
-	
-	
-	
-	
-	
 </div>	
 </body>
 </html>

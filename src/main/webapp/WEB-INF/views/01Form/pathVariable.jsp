@@ -10,15 +10,12 @@
 </head>
 <body>
 <div class="container">	
-	<h2>form 데이터 받기</h2>
-	
-	<h3>@PathVariable 어노테이션으로 폼값 받기</h3>
-	
+	<h2>Form값 받기</h2>	
+	<h3>@PathVariable 어노테이션으로 폼값 받기</h3>	
 	<ul>
 		<li>회원아이디 : ${memberId }</li>
 		<li>회원이름 : ${memberName }</li>
-	</ul>
-	
+	</ul>	
 	<!--  
 	웹브라우저는 /로 구분되는 요청명을 디렉토리(경로)로 인식하므로
 	현재 "/form/gildong/코스모"에서는 ../를 추가하여 상위디렉토리로
@@ -28,8 +25,7 @@
 	<div>
 		<h3>이미지 경로 확인</h3>
 		<img src="../../static/images/4.png" alt="졸귀 강아지" />
-	</div>
-	
+	</div>	
 </div>
 </body>
 </html>

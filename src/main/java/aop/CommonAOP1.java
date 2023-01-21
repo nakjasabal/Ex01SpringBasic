@@ -4,7 +4,7 @@ import org.aspectj.lang.ProceedingJoinPoint;
 
 public class CommonAOP1 {
 	
-	public Object loggerAOP(ProceedingJoinPoint jointPoint)
+	public Object runTimeAOP(ProceedingJoinPoint jointPoint)
 		throws Throwable{
 		String joinSignStr = jointPoint.getSignature().toShortString();
 		Object obj = null;
@@ -30,4 +30,6 @@ public class CommonAOP1 {
 		return obj;
 	}
 }
+
+
 

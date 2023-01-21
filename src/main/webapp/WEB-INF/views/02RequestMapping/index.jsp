@@ -11,7 +11,7 @@
 </head>
 <body>
 <div class="container">	
-	<h2>@RequestMapping의 속성들</h2>
+	<h2>@RequestMapping 어노테이션의 속성들</h2>
 	<script>
 	$(function(){
 		let f = document.searchFrm;

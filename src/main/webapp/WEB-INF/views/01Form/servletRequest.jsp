@@ -10,15 +10,13 @@
 </head>
 <body>
 <div class="container">
-	
-	<h2>HttpServletRequest로 폼값 받기(Get방식)</h2>
-	
+	<h2>Form값 받기</h2>	
+	<h3>HttpServletRequest로 폼값 받기</h3>	
 	<ul>
 		<li>아이디 : ${id }</li>
 		<li>패스워드 : ${pw }</li>
 		<li>메세지 : ${message }</li>
 	</ul>
-
 </div>
 </body>
 </html>

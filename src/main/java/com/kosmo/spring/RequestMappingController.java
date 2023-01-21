@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 import common.MemberDTO;
-import common.StudentDTO;
+import common._StudentDTO;
    
 @Controller
 public class RequestMappingController {
@@ -84,37 +84,23 @@ public String myMethod() {
 		return mv;	 
 	}
 
-	@RequestMapping(value="/requestMapping/getSearch.do", params={"category=it"}, 
-			method=RequestMethod.GET, produces="text/html; charset=utf-8")
+	/*
+	method를 명시하지 않으면 GET or POST를 둘다 받을 수 있다. 
+	 */
+	@RequestMapping(value="/requestMapping/getSearch.do", params={"category"}, 
+			produces="text/html; charset=utf-8")
 	@ResponseBody
 	public String getSearch3(HttpServletRequest req) {
 		StringBuffer sb = new StringBuffer();
 		sb.append("<h2>@RequestMapping 어노테이션</h2>");
 		sb.append("getSearch3() 호출됨");
 		sb.append("검색어="+req.getParameter("searchWord"));
-		sb.append("<br>파라미터="+req.getParameter("category"));
+		for(String s : req.getParameterValues("category")) {
+			sb.append("<br>체크박스="+s);
+		}
 		
 		return sb.toString();
 	}
-	/*
-	이 경우 전송방식이 Get이고 category가 it일때만 매핑되므로 
-	it가 아닌 다른 카테고리를 선택했을때는 매핑이 되지 않아 400(잘못된요청)에러가 발생한다. 
-	따라서 it를 선택한 후 Post전송을 하더라도 에러가 발생될것이다. 
-	 */
-	
-     
-	/*
-	@ModelAttribute
-		: 뷰로 전달되는 커맨드객체의 이름을 변경하고 싶을때 사용한다. 
-		StudentDTO를 si로 변경하여 뷰로 전달한다. 
-	 */
-	@RequestMapping("/requestMapping/modelAttribute.do")
-	public String studentInfo(
-		@ModelAttribute("dto") MemberDTO memberDTO) {
-		
-		return "02RequestMapping/modelAttribute";
-	}
-
 }
 
 
