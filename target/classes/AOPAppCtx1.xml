@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd">
+   
+    <!-- 공통기능으로 사용할 클래스 -->
+	<bean id="commonAOP1" class="aop.CommonAOP1"></bean>
+	
+	<!-- AOP 설정 --> 
+	<aop:config>
+		<aop:aspect id="logger" ref="commonAOP1">
+			<aop:pointcut expression="within(aop.*)" id="myPublicMethod" />
+			<aop:around pointcut-ref="myPublicMethod" method="loggerAOP" />
+		</aop:aspect>
+	</aop:config>
+	
+	<!-- 빈 생성 -->
+	<bean id="salesMan" class="aop.SalesManVO">
+		<property name="name" value="장그래" />
+		<property name="age" value="35" />
+		<property name="job">
+			<value>영업3팀</value>
+		</property>
+		<property name="salary">
+			<value>300</value>
+		</property>
+	</bean>		
+</beans>
+
+
